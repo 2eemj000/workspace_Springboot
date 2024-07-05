@@ -12,7 +12,7 @@ import lombok.ToString;
 @ToString
 @Builder
 public class MemberVO {
-	private Integer Id;
+	private Integer id;
 	private String pass;
 	private String name;
 	private Date regidate;
