@@ -7,12 +7,19 @@ import edu.pnu.domain.MemberDTO;
 
 public class MemberService {
     private MemberDao memberDao;
+    
 
     public MemberService() {
         this.memberDao = new MemberDao();
     }
 
-    public List<MemberDTO> getAllMembers() {
-        return memberDao.getAllMembers();
+    public List<MemberDTO> getAllMember() {
+        return memberDao.getAllMember();
+    }
+    
+    public MemberDTO getMemberById(integer id) {
+    	for (MemberDTO m : list) {
+    		
+    	}
     }
 }
