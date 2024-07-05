@@ -1,0 +1,29 @@
+package edu.pnu.service;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+
+import edu.pnu.domain.MemberVO;
+
+public class MemberService {
+
+		// 검색(Read - select)
+		@GetMapping("/members")
+		public List<MemberVO> getAllMember() {
+		return list;
+		}
+
+		
+		// 검색(Read - select) # Params에 id를 넣어서 실행
+		@GetMapping("/member")
+		public MemberVO getMemberById(Integer id) {
+			for (MemberVO m : list) {
+				if (m.getId() == id)
+					return m;
+			}
+			return null;
+		}
+	
+		
+}

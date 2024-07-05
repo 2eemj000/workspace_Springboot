@@ -1,0 +1,7 @@
+package com.rubypaper.domain;
+
+public class BoardVO {
+	private int seq;
+	private String title;
+	
+}
