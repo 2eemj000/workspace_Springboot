@@ -51,6 +51,11 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.28</version> <!-- 사용 중인 MySQL 버전에 맞는 버전을 선택 -->
+</dependency>
 	</dependencies>
 
 	<build>
