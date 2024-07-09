@@ -19,7 +19,7 @@ public class MemberService {
 
     public List<MemberDTO> getAllMember() throws SQLException {
     	
-    	// 처음에는 map 돌면서 타입지정안하고 object로 다받음
+    	// 처음에는 map 돌면서 (타입지정 안하고) object로 다받음
     	Map<String, Object> map = memberDao.getAllMember();
     	
     	@SuppressWarnings("unchecked")
