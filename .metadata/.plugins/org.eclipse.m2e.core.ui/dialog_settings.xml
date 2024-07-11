@@ -29,13 +29,10 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="com.rubypaper"/>
 		</list>
 		<list key="groupId">
-			<item value="com.rubypaper"/>
 		</list>
 		<list key="artifactId">
-			<item value="board-spring-boot-starter"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -51,10 +48,13 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="com.rubypaper"/>
 		</list>
 		<list key="name">
+			<item value="Chapter04"/>
 		</list>
 		<list key="artifactId">
+			<item value="Chapter04"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
