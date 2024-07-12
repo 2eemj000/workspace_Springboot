@@ -17,5 +17,10 @@
 	    <artifactId>h2</artifactId>
 	    <version>2.2.224</version>
 	</dependency>
+	<dependency>
+		<groupId>com.rubypaper</groupId>
+		<artifactId>Chapter05</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
   </dependencies>
 </project>

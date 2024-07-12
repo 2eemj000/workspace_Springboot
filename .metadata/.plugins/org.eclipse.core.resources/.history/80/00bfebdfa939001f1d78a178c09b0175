@@ -1,7 +1,0 @@
-package com.rubypaper.domain;
-
-@Getter
-public class BoardVO {
-	private int seq;
-	private String title;
-}
