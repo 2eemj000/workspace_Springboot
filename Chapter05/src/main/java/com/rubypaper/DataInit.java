@@ -12,7 +12,7 @@ import com.rubypaper.persistance.BoardRepository;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor // autowired 안쓰고 final쓸 때
-@Component // data가 빈객체로 올라가야 실행이 됨
+//@Component // data가 빈객체로 올라가야 실행이 됨
 public class DataInit implements ApplicationRunner {
 	
 	private final BoardRepository boardRepo;
@@ -20,22 +20,22 @@ public class DataInit implements ApplicationRunner {
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
 		// TODO Auto-generated method stub
-		for (int i=1; i<=5; i++) {
+		for (int i=1; i<=100; i++) {
 			boardRepo.save(Board.builder()
-					.title("title1"+i)
-					.writer("member1")
-					.content("content1"+i)
+					.title("title"+i)
+					//.writer("member1")
+					.content("content"+i)
 					.createDate(new Date())
 					.cnt((long)(Math.random()*100))
 					.build()
 			);
 		}
 	
-		for (int i=1; i<=5; i++) {
+		for (int i=1; i<=100; i++) {
 			boardRepo.save(Board.builder()
-					.title("title2"+i)
-					.writer("member2")
-					.content("content2"+i)
+					.title("title"+i)
+					//.writer("member2")
+					.content("content"+i)
 					.createDate(new Date())
 					.cnt((long)(Math.random()*100))
 					.build()

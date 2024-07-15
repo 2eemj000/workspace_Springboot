@@ -1,8 +1,0 @@
-package edu.pnu.domain;
-
-public class MemberVO {
-	private Integer Id;
-	private String pass;
-	private String name;
-	private Date regidate;
-}
