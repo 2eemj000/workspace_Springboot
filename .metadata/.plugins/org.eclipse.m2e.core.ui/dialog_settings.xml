@@ -48,13 +48,10 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
-			<item value="com.rubypaper"/>
 		</list>
 		<list key="name">
-			<item value="Chapter04"/>
 		</list>
 		<list key="artifactId">
-			<item value="Chapter04"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

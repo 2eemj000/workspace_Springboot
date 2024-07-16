@@ -14,7 +14,7 @@ import com.rubypaper.persistance.MemberRepository;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor // autowired 안쓰고 final쓸 때
-@Component // data가 빈객체로 올라가야 실행이 됨
+//@Component // data가 빈객체로 올라가야 실행이 됨
 public class DataInit2 implements ApplicationRunner {
 	
 	private final BoardRepository boardRepo;

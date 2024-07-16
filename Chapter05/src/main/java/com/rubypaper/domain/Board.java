@@ -35,10 +35,10 @@ public class Board {
 	// private String writer;
 	private String content;
 	@Temporal(value=TemporalType.TIMESTAMP)
-	private Date createDate; 
+	private Date createDate;  
 	private Long cnt;
 	
 	@ManyToOne // Many가 나자신(Board)
-	@JoinColumn(name="MEMBER_ID") // member테이블의 id필드와 연결될 필드명, 이름안주면 클래스_member컬럼이름
+	@JoinColumn(name="MEMBER_ID", nullable=false) // member테이블의 id필드와 연결될 필드명, 이름안주면 클래스_member컬럼이름, nullable=false: 항상 참조하는 매핑값을 가짐
 	private Member member;
 }
