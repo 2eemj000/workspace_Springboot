@@ -12,7 +12,7 @@ import edu.pnu.domain.Member;
 import edu.pnu.persistence.MemberRepository;
 
 @Service
-public class BoardUserDetailsService implements UserDetailsService {
+public class BoardUserDetailsService implements UserDetailsService { // IoC에 등록
 
 	@Autowired
 	private MemberRepository memberRepo;
@@ -30,6 +30,6 @@ public class BoardUserDetailsService implements UserDetailsService {
 		return new User(member.getUsername(), member.getPassword(),
 				AuthorityUtils.createAuthorityList(member.getRole().toString()));
 		// User는 UserDetails를 구현한 클래스 (다형성)
-		// 로그인성공하면 security context라고 불리는 session영역에 User객체를 저장함
+		// 로그인성공하면 security context라고 불리는 session영역에 User객체를 저장함 -> 성공하면 이동하는 페이지로 포워딩
 	}
 }

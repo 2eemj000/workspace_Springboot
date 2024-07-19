@@ -15,7 +15,7 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity // 스프링 시큐리티 적용에 필요한 필터 객체들 자동 생성
 public class SecurityConfig {
 	
-	@Bean // 시큐리티 재정의 – 암호화 빈 객체 등록
+	@Bean // 시큐리티 재정의 – 암호화 빈 객체 등록 (전역에서 사용할 수 있도록)
 	PasswordEncoder passwordEncoder() {
 	return new BCryptPasswordEncoder();
 	}

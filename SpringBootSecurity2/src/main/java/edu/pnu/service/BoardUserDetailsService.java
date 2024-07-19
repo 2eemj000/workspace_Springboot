@@ -35,6 +35,7 @@ public class BoardUserDetailsService implements UserDetailsService {
 		// createAuthorityList : 주어진 권한 문자열들로부터 권한 목록을 생성
 		// User는 UserDetails를 구현한 클래스 (다형성)
 		// 로그인성공하면 security context라고 불리는 session영역에 User객체를 저장함
+		// security context안에 UserDetails, OAuth2User가 있음
 		// OAuth2User : 다양한 공급자에서 제공되는 사용자 정보를 일관된 방식으로 받아오고 처리
 	}
 }
