@@ -19,7 +19,7 @@ public class BoardUserDetailsService implements UserDetailsService {
 	
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		// TODO Auto-generated method stub
+		
 		// memberRepo에서 사용자 정보를 검색해서
 		Member member = memberRepo.findById(username)
 							.orElseThrow(()->new UsernameNotFoundException("Not Found"));
