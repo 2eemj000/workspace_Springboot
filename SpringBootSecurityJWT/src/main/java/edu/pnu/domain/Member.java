@@ -17,7 +17,7 @@ import lombok.ToString;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
+@Entity // 데이터베이스의 테이블과 일대일로 매핑
 public class Member {
 
 	@Id

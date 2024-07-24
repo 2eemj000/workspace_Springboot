@@ -12,8 +12,11 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.access.intercept.AuthorizationFilter;
 
 import edu.pnu.config.filter.JWTAuthenticationFilter;
+import edu.pnu.config.filter.JWTAuthorizationFilter;
+import edu.pnu.persistance.MemberRepository;
 
 @Configuration
 @EnableWebSecurity
@@ -23,6 +26,10 @@ public class SecurityConfig {
 	PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
+	
+	@Autowired
+	private MemberRepository memberRepository;
+	
 	@Bean
 	SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
 		
@@ -43,6 +50,10 @@ public class SecurityConfig {
 		// 스프링 시큐리티가 등록한 필터체인의 뒤에 작성한 필터를 추가
 		http.addFilter(new JWTAuthenticationFilter(
 									authenticationConfiguration.getAuthenticationManager()));
+		
+		// 스프링 시큐리티가 등록한 필터들 중에서 AuthorizationFilter 앞에 작성한 필터를 삽입
+		http.addFilterBefore(new JWTAuthorizationFilter(memberRepository), AuthorizationFilter.class);
+		
 		return http.build();
 	}
 	
